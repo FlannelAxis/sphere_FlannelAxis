@@ -1,10 +1,17 @@
 //create a sphere
-CSG sphere = new Sphere(25)// Spheres radius
+def mov=0
+CSG sphere = new Sphere(30)// Spheres radius
 				.toCSG()// convert to CSG to display
 				
-CSG sphereHighRes = new Sphere(25,// Spheres radius
+CSG sphereHighRes = new Sphere(30,// Spheres radius
 						40,//elevation Divisions
 						40)// vertical divisions
 						.toCSG()// convert to CSG to display
-sphere=sphere.movex(55)
+//println sphere.getTotalX()
+//println sphereHighRes.getTotalX()
+def offset1=sphere.getTotalX()/2
+def offset2=sphereHighRes.getTotalX()/2
+
+mov=offset1+offset2
+sphere=sphere.movex(mov)
 return [sphere,sphereHighRes]
