@@ -4,7 +4,7 @@ CSG sphere = new Sphere(30)// Spheres radius
 				.toCSG()// convert to CSG to display
 				
 CSG sphereHighRes = new Sphere(30,// Spheres radius
-						3,//elevation Divisions
+						4,//elevation Divisions
 						2)// vertical divisions
 						.toCSG()// convert to CSG to display
 //println sphere.getTotalX()
